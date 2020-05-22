@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_demo"
+    app:startDestination="@id/noteDetailView3">
+    <fragment
+        android:id="@+id/noteDetailView3"
+        android:name="com.wiseassblog.jetpacknotesmvvmkotlin.note.notedetail.NoteDetailView"
+        android:label="NoteDetailView"
+        tools:layout="@layout/fragment_note_detail" />/>
+    <fragment
+        android:id="@+id/noteListView2"
+        android:name="com.wiseassblog.jetpacknotesmvvmkotlin.note.notelist.NoteListView"
+        android:label="NoteListView"
+        tools:layout="@layout/fragment_note_list" />/>
+    <activity
+        android:id="@+id/loginActivity"
+        android:name="com.wiseassblog.jetpacknotesmvvmkotlin.login.LoginActivity"
+        android:label="activity_login"
+        tools:layout="@layout/fragment_login" />
+</navigation>
