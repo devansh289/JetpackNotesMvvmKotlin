@@ -19,10 +19,11 @@
         app:srcCompat="@drawable/ic_arrow_back_black_24dp" />
 
     <TextView
+        style="@style/Text.Primary.LoginHeader"
         android:id="@+id/lbl_login_status_header"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="Login Status"
         app:layout_constraintBottom_toTopOf="@+id/imv_antenna_animation"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -32,6 +33,7 @@
 
     <ImageView
         android:id="@+id/imv_antenna_animation"
+        android:tint="#FFFFFF"
         android:layout_width="128dp"
         android:layout_height="128dp"
         app:layout_constraintBottom_toTopOf="@+id/lbl_login_status_display"
@@ -43,9 +45,10 @@
 
     <TextView
         android:id="@+id/lbl_login_status_display"
+        style="@style/Text.Primary.LoginHeader.Sub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        tools:text="Signed In"
         app:layout_constraintBottom_toTopOf="@+id/btn_auth_attempt"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -54,9 +57,10 @@
 
     <Button
         android:id="@+id/btn_auth_attempt"
+        style="@style/AuthButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        tools:text="Sign Out"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
