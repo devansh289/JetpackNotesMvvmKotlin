@@ -3,17 +3,31 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph_demo"
-    app:startDestination="@id/noteDetailView3">
+    app:startDestination="@id/noteListView2">
     <fragment
         android:id="@+id/noteDetailView3"
         android:name="com.wiseassblog.jetpacknotesmvvmkotlin.note.notedetail.NoteDetailView"
         android:label="NoteDetailView"
-        tools:layout="@layout/fragment_note_detail" />/>
+        tools:layout="@layout/fragment_note_detail" >
+        <action
+            android:id="@+id/action_noteDetailView3_to_noteListView2"
+            app:destination="@id/noteListView2" />
+        <argument
+            android:name="nodeID"
+            app:argType="string" />
+    </fragment>/>
     <fragment
         android:id="@+id/noteListView2"
         android:name="com.wiseassblog.jetpacknotesmvvmkotlin.note.notelist.NoteListView"
         android:label="NoteListView"
-        tools:layout="@layout/fragment_note_list" />/>
+        tools:layout="@layout/fragment_note_list" >
+        <action
+            android:id="@+id/action_noteListView2_to_loginActivity"
+            app:destination="@id/loginActivity" />
+        <action
+            android:id="@+id/action_noteListView2_to_noteDetailView3"
+            app:destination="@id/noteDetailView3" />
+    </fragment>/>
     <activity
         android:id="@+id/loginActivity"
         android:name="com.wiseassblog.jetpacknotesmvvmkotlin.login.LoginActivity"
