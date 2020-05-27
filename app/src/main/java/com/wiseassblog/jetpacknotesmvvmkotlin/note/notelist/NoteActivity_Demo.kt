@@ -6,6 +6,7 @@ import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import com.wiseassblog.jetpacknotesmvvmkotlin.R
 import kotlinx.android.synthetic.main.activity_note_demo.*
 
 class NoteActivityDemo : AppCompatActivity() {

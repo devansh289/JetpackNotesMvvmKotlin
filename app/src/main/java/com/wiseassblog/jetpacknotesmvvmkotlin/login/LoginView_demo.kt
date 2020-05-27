@@ -10,6 +10,7 @@ import androidx.activity.OnBackPressedCallback
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.ViewModelProviders
 import com.wiseassblog.jetpacknotesmvvmkotlin.R
 import com.wiseassblog.jetpacknotesmvvmkotlin.common.startWithFade
 import com.wiseassblog.jetpacknotesmvvmkotlin.login.buildlogic.LoginInjector
@@ -46,8 +47,8 @@ class LoginView_demo : Fragment() {
     private fun observeViewModels() {
         viewModel.signInStatusText.observe(
             viewLifecycleOwner,
-            Observer { text ->
-                lbl_login_status_display.text = text
+            Observer {
+                lbl_login_status_display.text = it
             }
         )
 
